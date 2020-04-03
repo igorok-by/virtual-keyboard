@@ -1,0 +1,33 @@
+/* General */
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #767e9e;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
