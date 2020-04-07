@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 
 const localStoredLang = localStorage.getItem('keyboardLang');
 let keyboardLang = localStoredLang || 'eng';
@@ -98,30 +99,25 @@ const handleReplaceButtonName = (buttonName) => {
 const addTemplateForButtons = (buttonName) => {
   if (typeof buttonName === 'object') {
     return `<div class="button">${buttonName[0]}</div>`;
-  };
-
+  }
   if (buttonName === ' ') {
     return `<div class="button button--big-width">${buttonName}</div>`;
-  };
-
+  }
   if (buttonName === 'CapsLock') {
     return `<div class="button button--capslock">${buttonName}</div>`;
-  };
-
+  }
   if (buttonName.startsWith('Arrow')) {
     return `<div class='button-wrap'>
               <span class="button button--text-hidden">${buttonName}</span>
               <span class="button__replace button__arrow button__arrow-${handleReplaceButtonName(buttonName).toLowerCase()}"></span>
             </div>`;
-  };
-
+  }
   if (handleReplaceButtonName(buttonName)) {
     return `<div class='button-wrap'>
               <span class="button button--text-hidden">${buttonName}</span>
               <span class="button__replace">${handleReplaceButtonName(buttonName)}</span>
             </div>`;
-  };
-
+  }
   return `<div class="button">${buttonName}</div>`;
 };
 
@@ -158,7 +154,7 @@ const isLanguageToggled = (pressedList) => {
 
 const specialKeysHandlers = {
   isValueSingle(textInButton) {
-    return textInButton.length === 1
+    return textInButton.length === 1;
   },
 
   handleTypedSymbols(typedSymbols) {
@@ -172,8 +168,8 @@ const specialKeysHandlers = {
   },
 
   deleteSelectedSymbols() {
-    inputText.value = inputText.value.slice(0, inputText.selectionStart) +
-      inputText.value.slice(inputText.selectionEnd);
+    inputText.value = inputText.value.slice(0, inputText.selectionStart)
+      + inputText.value.slice(inputText.selectionEnd);
   },
 
   handlePressBackspace() {
@@ -462,8 +458,6 @@ const addHandlers = () => {
     }
     return false;
   };
-
-
 
   window.addEventListener('mouseup', handleOnMouseUp);
 

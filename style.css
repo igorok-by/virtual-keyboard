@@ -1,10 +1,8 @@
-/* General */
-
 *,
 ::after,
 ::before {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -14,15 +12,19 @@ html {
   font-size: 25px;
   line-height: 1;
   font-family: "Noto Sans", "Arial", sans-serif;
+
   scroll-behavior: smooth;
 }
 
 body {
   position: relative;
+
   margin: 0;
   padding: 0;
-  color: #fff;
-  background-color: #fff;
+
+  color: #ffffff;
+
+  background-color: #ffffff;
 }
 
 a {
@@ -34,8 +36,9 @@ a:hover {
   font: inherit;
   color: inherit;
   text-decoration: none;
-  cursor: pointer;
+
   outline: 0;
+  cursor: pointer;
 }
 
 img {
@@ -49,11 +52,14 @@ img {
   width: 1000px;
   height: 150px;
   margin: 0 auto;
-  margin-bottom: 50px;
   margin-top: 50px;
+  margin-bottom: 50px;
+
   font-size: 25px;
-  background-color: #fff;
+
+  background-color: #ffffff;
   border: 3px solid #f89d3e;
+
   resize: vertical;
 }
 
@@ -63,14 +69,17 @@ img {
 
 .keyboard {
   position: relative;
+
   display: flex;
-  align-items: center;
   flex-direction: column;
-  margin: 0 auto;
+  align-items: center;
   width: 1000px;
+  margin: 0 auto;
   padding: 30px 20px;
+
   background-color: #f89d3e;
   border-radius: 5px;
+
   user-select: none;
 }
 
@@ -85,14 +94,16 @@ img {
 
 .button-wrap {
   position: relative;
+
   box-sizing: border-box;
   min-width: 65px;
-  margin-left: 3px;
   margin-right: 3px;
+  margin-left: 3px;
 }
 
 .button {
   z-index: 1;
+
   display: block;
   min-width: 55px;
   height: 50px;
@@ -100,15 +111,18 @@ img {
   margin-left: 3px;
   padding-right: 15px;
   padding-left: 15px;
-  line-height: 50px;
-  color: #fff;
+
   font-size: 18px;
-  background-color: #453F6D;
-  border-radius: 2px;
-  border: 1px solid transparent;
+  line-height: 50px;
   text-align: center;
+  color: #ffffff;
+
+  background-color: #453f6d;
+  border: 1px solid transparent;
+  border-radius: 2px;
   cursor: pointer;
-  transition: all .1s ease-in-out;
+
+  transition: all 0.1s ease-in-out;
 }
 
 .button:hover {
@@ -126,12 +140,14 @@ img {
 
 .button--capslock {
   position: relative;
+
   min-width: 120px;
-  background-color: #B01C8A;
+
+  background-color: #b01c8a;
 }
 
 .button--capslock:hover {
-  background-color: #453F6D;
+  background-color: #453f6d;
 }
 
 .button--capslock::before {
@@ -139,49 +155,55 @@ img {
   position: absolute;
   top: 7px;
   right: 7px;
+
   display: block;
   width: 8px;
   height: 8px;
+
+  background-color: #ffffff;
   border-radius: 50%;
-  background-color: #fff;
   opacity: 0.7;
 }
 
 .button--capslock.active::before,
 .button--capslock-active::before {
-  background-color: #F81D2C;
+  background-color: #f81d2c;
   opacity: 1;
 }
 
 .button--capslock-active {
-  background-color: #7D1463;
+  background-color: #7d1463;
 }
 
 .button--capslock.active {
-  background-color: #7D1463;
+  background-color: #7d1463;
 }
 
 .button--text-hidden {
   position: absolute;
   z-index: 1;
+
   width: 100%;
   height: 100%;
-  margin-left: 0;
   margin-right: 0;
+  margin-left: 0;
+
   font-size: 0;
 }
 
 .button__replace {
   position: absolute;
-  z-index: 2;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 18px;
+  z-index: 2;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+
+  font-size: 18px;
 }
 
 .button__arrow {
@@ -193,11 +215,13 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
   width: 14px;
   height: 14px;
-  background-image: url('./img/previous.svg');
+
+  background-image: url("./img/previous.svg");
   background-size: 100%;
+  transform: translate(-50%, -50%);
 }
 
 .button__arrow-down:after {
@@ -215,8 +239,9 @@ img {
 .about-switch {
   position: absolute;
   top: -30px;
+
   font-size: 18px;
-  color: #453F6D;
+  color: #453f6d;
 }
 
 .about-switch span {
@@ -226,6 +251,7 @@ img {
 .about-system {
   position: absolute;
   bottom: -30px;
+
   font-size: 15px;
-  color: #453F6D;
+  color: #453f6d;
 }
